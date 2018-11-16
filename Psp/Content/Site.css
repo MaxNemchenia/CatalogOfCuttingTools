@@ -1,0 +1,308 @@
+﻿body {
+    font-size: 13px;
+    font-family: Verdana, Arial, Helvetica, Sans-Serif;
+    background-color: #f7f7fa;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom:10px;
+   
+}
+
+#guest {
+       display: inline-block;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  user-select: none;
+   padding-right: 1px;
+    font-size: 13px;
+    font-family: Verdana, Arial, Helvetica, Sans-Serif;
+}
+
+.brd2 {
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    user-select: none;
+    font-size: 13px;
+    font-family: Verdana, Arial, Helvetica, Sans-Serif;
+    background: #F6D900; /* Цвет фона */
+    padding: 8px;
+
+   
+}
+
+ .brd {
+    /* Параметры границы */
+    background: #454545; /* Цвет фона */
+    padding: 42px; /* Поля вокруг текста */
+    
+   }
+.fix{
+    position:fixed;
+    top:0; left:100px;
+    width:80%;
+}
+
+#footer {
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    user-select: none;
+    font-size: 13px;
+    font-family: Verdana, Arial, Helvetica, Sans-Serif;
+    position: fixed; /* Фиксированное положение */
+    left: 108px;
+    right: 108px;
+    bottom: 0; /* Левый нижний угол */
+    color: #fff; /* Цвет текста */
+    width: 1456px; /* Ширина слоя */
+    background: #454545;
+    text-align: center;
+    padding: 8px;
+    opacity: 1;
+}
+
+.myFooter {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    right: 108px;
+    height: 80px;
+}
+ .hFooter { /* это распорка в основном блоке - резервируем место для подвала */
+
+height: 42px; /* высота нашего подвала */
+padding:30px;
+clear: both;
+}
+
+.myHead{
+    background-color:#454545;
+}
+a.button8 {
+  display: inline-block;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  user-select: none;
+   padding: .5em 2em;
+ 
+  outline: none;
+  border: 2px solid;
+  border-radius: 1px;
+  transition: 0.2s;
+ 
+} 
+a.button8:hover { background: gray; }
+a.button8:active { background: white; }
+
+
+.button15 {
+  display: inline-block;
+  font-family: arial,sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  color: rgb(68,68,68);
+  text-decoration: none;
+  user-select: none;
+  padding: .2em 1.2em;
+  outline: none;
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: 2px;
+  background: #F6D900 linear-gradient(#F6D900, #F6D900);
+  transition: all .218s ease 0s;
+}
+.button15:hover {
+  color: rgb(24,24,24);
+  border: 1px solid rgb(198,198,198);
+  background: #F6D900 linear-gradient(#F6D900, #F6D900);
+  box-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+.button15:active {
+  color: rgb(51,51,51);
+  border: 1px solid #F6D900;
+  background: #F6D900 linear-gradient(#F6D900, #F6D900);
+  box-shadow: 0 1px 2px rgba(0,0,0,.1) inset;
+}
+
+.poisk{
+    /*background-image:url(find.png);*/
+    icon:url(find.png);
+  
+    
+}
+.mainBody{
+     color: black;
+    font-weight: 700;
+    text-decoration: none;
+    user-select: none;
+    font-size: 13px;
+    font-family: Verdana, Arial, Helvetica, Sans-Serif;
+   
+    padding: 8px;
+
+     position: absolute;
+
+    padding-bottom: 22px;
+}
+
+   
+a{
+    color:green;
+    padding-right:10px;
+}
+
+#a1{
+    color:red;
+    align-self:center;
+    /*text-align :right;*/
+    
+}
+
+.search{
+    background-color: #454545;
+      display: inline-block;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  user-select: none;
+   padding: .2em 2em;
+ 
+  outline: none;
+  border: 2px solid;
+  border-radius: 1px;
+  transition: 0.2s;
+ 
+} 
+.search:hover { background: gray; }
+.search:active { background: white; }
+
+nav{
+    display: block;
+}
+   
+.menu {
+    padding-left:50px;
+}
+.menu ul {
+     padding-left:50px;
+    list-style:none;
+}
+.menu li {
+    display:inline;
+}
+.menu a:hover {
+    color:red;
+}
+table {
+   vertical-align:middle;
+   text-align:left; 
+ }
+.header {
+    font-weight:bold;
+}
+ td {
+    padding-right:100px;
+ }
+input {
+    width: 100px;
+}
+
+
+
+.rightHead{
+      position: absolute;
+      top:44px;
+  
+    right:110px;
+ 
+}
+
+.leftHead{
+      position: absolute;
+       top:45px;
+    left:110px;
+    
+}
+
+form-horizontal{
+    
+
+    background-color: #fff;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));
+    background-image: -webkit-linear-gradient(top, #fff, #eee);
+    background-image: -moz-linear-gradient(top, #fff, #eee);
+    background-image: -ms-linear-gradient(top, #fff, #eee);
+    background-image: -o-linear-gradient(top, #fff, #eee);
+    background-image: linear-gradient(top, #fff, #eee);  
+    height: 240px;
+    width: 400px;
+    margin: -150px 0 0 -230px;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;  
+    -webkit-box-shadow:
+          0 0 2px rgba(0, 0, 0, 0.2),
+          0 1px 1px rgba(0, 0, 0, .2),
+          0 3px 0 #fff,
+          0 4px 0 rgba(0, 0, 0, .2),
+          0 6px 0 #fff,  
+          0 7px 0 rgba(0, 0, 0, .2);
+    -moz-box-shadow:
+          0 0 2px rgba(0, 0, 0, 0.2),  
+          1px 1px   0 rgba(0,   0,   0,   .1),
+          3px 3px   0 rgba(255, 255, 255, 1),
+          4px 4px   0 rgba(0,   0,   0,   .1),
+          6px 6px   0 rgba(255, 255, 255, 1),  
+          7px 7px   0 rgba(0,   0,   0,   .1);
+    box-shadow:
+          0 0 2px rgba(0, 0, 0, 0.2),  
+          0 1px 1px rgba(0, 0, 0, .2),
+          0 3px 0 #fff,
+          0 4px 0 rgba(0, 0, 0, .2),
+          0 6px 0 #fff,  
+          0 7px 0 rgba(0, 0, 0, .2);
+}
+
+#form-horizontal:before
+{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    border: 1px dashed #ccc;
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    -moz-box-shadow: 0 0 0 1px #fff;
+    -webkit-box-shadow: 0 0 0 1px #fff;
+    box-shadow: 0 0 0 1px #fff;
+}
+
+ TABLE {
+    border-collapse: collapse; /* Убираем двойные линии между ячейками */
+    width: 300px; /* Ширина таблицы */
+   }
+   TH, TD {
+    border: 1px solid black; /* Параметры рамки */
+    text-align: center; /* Выравнивание по центру */
+    padding: 4px; /* Поля вокруг текста */
+   }
+   TH {
+    background: #fc0; /* Цвет фона ячейки */
+    height: 40px; /* Высота ячеек */
+    vertical-align: bottom; /* Выравнивание по нижнему краю */
+    padding: 0; /* Убираем поля вокруг текста */
+   }
+
+
+
+
+

@@ -1,0 +1,41 @@
+﻿@model  Psp.Models.Drill
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>WatchDrill</h2>
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DrillForm</title>
+</head>
+<body>
+    <div class="mainBody">
+        
+        <table>
+
+            <tr>
+                <th><p>Name</p></th>
+                <th><p>Diametr</p></th>
+                <th><p>Total Length</p></th>
+                <th><p>Work Length</p></th>
+                <th><p>Standart</p></th>
+                
+            </tr>
+            <tr>
+                <td><p>@Model.Name</p></td>
+                <td><p>@Model.Diametr</p></td>
+                <td><p>@Model.TotalLength</p></td>
+                <td><p>@Model.WorkLength</p></td>
+                <td><p>@Model.Standart</p></td>
+
+            </tr>
+
+
+        </table>
+        <a class="button15" href="/Drill/DrillForm">Back</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+ 
+    <link type="text/css" rel="stylesheet" href="../../Content/Site.css" />
+</head>
+
+<body>
+    <div>
+    
+        <div class="brd2">
+            Handbook of cutting tools
+        </div>
+
+        <div class="brd">
+        <div class="leftHead">
+            @using (Ajax.BeginForm("InstrumentSearch", new AjaxOptions { UpdateTargetId = "results" }))
+            {
+
+                <input type="text" name="name" />
+                <button class="search" type="submit">search</button>
+
+            }
+            <br />
+
+            @Scripts.Render("~/scripts/jquery-1.10.2.min.js")
+            @Scripts.Render("~/scripts/jquery.unobtrusive-ajax.min.js")
+
+            <a class="button8" href="/Home/Index">Home</a>
+            <a class="button8" href="/Drill/DrillForm">Drills</a>
+            <a class="button8" href="/Cutter/CutterForm">Cutters</a>
+            <a class="button8" href="/MillingCutter/MillingForm">Milling Cutters</a>
+        </div>
+
+            <div class="rightHead">
+                <p id="guest">@ViewBag.Greeting, @ViewBag.user</p>
+                <br />
+
+                @if (User.IsInRole("admin"))
+                {
+                    <a class="button8" href="/Account/Logoff">Exit</a>
+                }
+                else
+        if (User.IsInRole("user"))
+                {
+                    <a class="button8" href="/Account/Logoff">Exit</a>
+                }
+                else
+                {
+                    <a class="button8" href="/Account/Login">Login</a>
+                    <a class="button8" href="/Account/Register">Registration</a>
+
+                }
+            </div>
+    </div>
+        @RenderBody()
+     
+        <div id="footer">
+            2017
+        </div>
+    </div>
+    @if (IsSectionDefined("Scripts"))
+    {
+        @RenderSection("Scripts", false);
+    }
+</body>
+</html>

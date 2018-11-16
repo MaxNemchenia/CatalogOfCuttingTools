@@ -1,0 +1,38 @@
+﻿@model Psp.Models.Cutter
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="mainBody">
+    <h2>Новая книга</h2>
+
+    @using (Html.BeginForm())
+    {
+
+        @Html.LabelFor(model => model.Name, "Name")
+        <br />
+        @Html.EditorFor(model => model.Name)
+        <br /><br />
+        @Html.LabelFor(model => model.Diametr, "Diametr")
+        <br />
+        @Html.EditorFor(model => model.Diametr)
+        <br /><br />
+        @Html.LabelFor(model => model.TotalLength, "Total Length")
+        <br />
+        @Html.EditorFor(model => model.TotalLength)
+        <br /><br />
+        @Html.LabelFor(model => model.WorkLength, "Work Length")
+        <br />
+        @Html.EditorFor(model => model.WorkLength)
+        <br /><br />
+        @Html.LabelFor(model => model.Standart, "Standart")
+        <br />
+        @Html.EditorFor(model => model.Standart)
+        <br /><br />
+        <button class="button15" type="submit">Add</button>
+        <button class="button15" type="reset">Reset</button>
+
+        <a class="button15" href="/Cutter/CutterForm">Back</a>
+
+    }
+</div>

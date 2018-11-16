@@ -1,0 +1,22 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Psp.Models.MillingCutter
+<div class="mainBody">
+    <h2>Delete</h2>
+
+    <h4><p>Name </p></h4> <p> @Html.DisplayFor(model => model.Name)</p>
+    <h4><p> Diametr </p> </h4> @Html.DisplayFor(model => model.Diametr)</p>
+    <h4> <p> Total Length </p></h4>   @Html.DisplayFor(model => model.TotalLength)</p>
+    <h4><p> Work Length </p> </h4>  @Html.DisplayFor(model => model.WorkLength)</p>
+    <h4> <p> Standart </p> </h4>  @Html.DisplayFor(model => model.Standart)</p>
+
+    @using (Html.BeginForm())
+    {
+        <button class="button15" type="submit">Delete</button>
+
+
+
+        <a class="button15" href="/MillingCutter/MillingForm">Back</a>
+    }
+    </div>

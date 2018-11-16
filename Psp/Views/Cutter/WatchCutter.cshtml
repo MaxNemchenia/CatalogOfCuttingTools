@@ -1,0 +1,41 @@
+﻿@model  Psp.Models.Cutter
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>WatchCutters</title>
+</head>
+<body>
+    <div class="mainBody"> 
+     
+        <table>
+
+              <tr>
+                <th><p>Name</p></th>
+                <th><p>Diametr</p></th>
+                <th><p>Total Length</p></th>
+                <th><p>Work Length</p></th>
+                <th><p>Standart</p></th>
+                
+            </tr>
+                <tr>
+                    <td><p>@Model.Name</p></td>
+                    <td><p>@Model.Diametr</p></td>
+                    <td><p>@Model.TotalLength</p></td>
+                    <td><p>@Model.WorkLength</p></td>
+                    <td><p>@Model.Standart</p></td>
+
+                </tr>
+
+
+        </table>
+        <a class="button15" href="/Cutter/CutterForm">Back</a>
+    </div>
+   
+</body>
+</html>

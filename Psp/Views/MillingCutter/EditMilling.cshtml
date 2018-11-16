@@ -1,0 +1,43 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Psp.Models.MillingCutter
+<div class="mainBody">
+    <h2>Drill № @Model.Id</h2>
+    @using (Html.BeginForm("EditMilling", "MillingCutter", FormMethod.Post))
+    {
+
+        @Html.HiddenFor(m => m.Id)
+        <p>
+            @Html.LabelFor(m => m.Name, "Name")
+            <br />
+            @Html.EditorFor(m => m.Name)
+        </p>
+        <p>
+            @Html.LabelFor(m => m.Diametr, "Diametr")
+            <br />
+            @Html.EditorFor(m => m.Diametr)
+
+        </p>
+        <p>
+            @Html.LabelFor(m => m.TotalLength, "Total Length")
+            <br />
+            @Html.EditorFor(m => m.TotalLength)
+        </p>
+        <p>
+            @Html.LabelFor(m => m.WorkLength, "Work Length")
+            <br />
+            @Html.EditorFor(m => m.WorkLength)
+        </p>
+        <p>
+            @Html.LabelFor(m => m.Standart, "Standart")
+            <br />
+            @Html.EditorFor(m => m.Standart)
+        </p>
+        <button class="button15" type="submit">Send</button>
+       
+
+        <a class="button15" href="/MillingCutter/MillingForm">Back</a>
+
+    }
+    </div>

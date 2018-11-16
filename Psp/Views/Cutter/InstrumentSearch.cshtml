@@ -1,0 +1,60 @@
+﻿
+@model IEnumerable<Psp.Models.Drill>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div id="searchresults">
+    
+    <h3>Result of the search : @ViewBag.Name</h3>
+    <ul>
+        @if (ViewBag.Name != "")
+        {
+
+            foreach (var b in ViewBag.Cutter)
+            {
+                <li>
+                    @b.Name @b.Standart
+                    <a href="/Cutter/WatchCutter/@b.Id">Watch more</a>
+                    @if (User.IsInRole("admin"))
+                    {
+                    <a href="/Cutter/EditCutter/@b.Id">Edit</a>
+                    <a href="/Cutter/DeleteCutter/@b.Id">Delete</a>
+                    }
+                </li>
+
+            }
+            foreach (var b in ViewBag.Milling)
+            {
+                <li>
+                    @b.Name @b.Standart
+                    <a href="/MillingCutter/WatchMilling/@b.Id">Watch more</a>
+                    @if (User.IsInRole("admin"))
+                    {
+                        <a href="/MillingCutter/EditMilling/@b.Id">Edit</a>
+                        <a href="/MillingCutter/DeleteMilling/@b.Id">Delete</a>
+                    }
+                </li>
+            }
+            foreach (var b in Model)
+            {
+                <li>
+                    @b.Name @b.Standart
+                    <a href="/Drill/WatchDrill/@b.Id">Watch more</a>
+                    @if (User.IsInRole("admin"))
+                    {
+                        <a href="/Drill/EditDrill/@b.Id">Edit</a>
+                        <a href="/Drill/DeleteDrill/@b.Id">Delete</a>
+                    }
+                </li>
+            }
+
+        }
+        
+           
+    </ul>
+</div>
+

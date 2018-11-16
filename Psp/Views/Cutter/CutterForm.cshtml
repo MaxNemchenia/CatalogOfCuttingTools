@@ -1,0 +1,57 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DrillForm</title>
+    <link type="text/css" rel="stylesheet" href="../../Content/Site.css" />
+</head>
+<body>
+    <div class="mainBody">
+
+
+
+
+
+
+
+        <table>
+           
+            <tr>
+                <th>Name</th>
+
+                <th>Standart</th>
+               
+            </tr>
+
+            @foreach (var b in ViewBag.Cutters)
+            {
+                <tr>
+                    <td><p>@b.Name</p></td>
+
+                    <td><p>@b.Standart</p></td>
+
+                    <td><p><a class="button15" href="/Cutter/WatchCutter/@b.Id">Watch more</a></p></td>
+                    @if (User.IsInRole("admin"))
+                    {
+                        <td><p><a class="button15" href="/Cutter/EditCutter/@b.Id">Edit</a></p></td>
+                        <td><p><a class="button15" href="/Cutter/DeleteCutter/@b.Id">Delete</a></p></td>
+                    }
+                </tr>
+            }
+          
+        </table>
+        @if (User.IsInRole("admin"))
+            {
+            <p><a class="button15" href="/Cutter/AddCutter">Add</a></p>
+        }
+    </div>
+    
+</body>
+</html>

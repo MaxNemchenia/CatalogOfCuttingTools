@@ -1,0 +1,56 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DrillForm</title>
+
+</head>
+<body>
+    <div class="mainBody">
+
+
+
+
+
+
+
+        <table>
+           
+            <tr>
+                <th>Name</th>
+
+                <th>Standart</th>
+               
+            </tr>
+
+            @foreach (var b in ViewBag.MillingCutters)
+            {
+                <tr>
+                    <td><p>@b.Name</p></td>
+
+                    <td><p>@b.Standart</p></td>
+
+                    <td><p><a class="button15" href="/MillingCutter/WatchMilling/@b.Id">Watch more</a></p></td>
+                    @if (User.IsInRole("admin"))
+                    {
+                        <td><p><a class="button15" href="/MillingCutter/EditMilling/@b.Id">Edit</a></p></td>
+                        <td><p><a class="button15" href="/MillingCutter/DeleteMilling/@b.Id">Delete</a></p></td>
+                    }
+                </tr>
+            }
+           
+        </table>
+        @if (User.IsInRole("admin"))
+            {
+            <p><a class="button15" href="/MillingCutter/AddMilling">Add</a></p>
+        }
+    </div>
+</body>
+</html>
